@@ -6,16 +6,16 @@ class Poem:
     keyword.
     """
 
-    def __init__(self, poem_id, text, target_doc, nlp):
-        self.id = poem_id     
-        self.text = text.strip()              
+    def __init__(self, poem_number, poem_text, target_doc, nlp):
+        self.poem_number = poem_number    
+        self.poem_text = poem_text.strip()              
         self.target_doc = target_doc  # spaCy Doc
         self.nlp = nlp
         self.similarity = None
 
     def get_text(self):
         """ Return the full poem text as a plain string """
-        return self.text
+        return self.poem_text
 
     def get_similarity(self):
         """ Return the similarity score of keyword and poem """
@@ -25,7 +25,7 @@ class Poem:
 
     def compute_similarity(self):
         """ Compute the poem's semantic similarity to the keyword """
-        poem_doc = self.nlp(self.text)
+        poem_doc = self.nlp(self.poem_text)
 
         if poem_doc.vector_norm == 0:
             return 0.0
@@ -37,4 +37,4 @@ class Poem:
         String representation that shows the poem's id and the current
         similarity value
         """
-        return f"Poem {self.id} (similarity={self.similarity:.4f})"
+        return f"Poem {self.poem_number} (similarity={self.similarity:.4f})"
