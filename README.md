@@ -89,7 +89,7 @@ natural language processing. 2003.
     adjectives) to identify structurally meaningful word categories, and then
     swap corresponding words between two Dickinson lines.
 3. Joanna Misztal and Bipin Indurkhya. "Poetry Generation System with an 
-emotional personality.
+emotional personality."
     - I really liked this article because it gave me the idea to use a single 
     word that the user chooses (the user has some emotional tie to that
     word or else they would not have chosen it) to generate a poem. It also
