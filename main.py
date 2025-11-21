@@ -4,6 +4,10 @@ import pyttsx3
 from generate_dickinson import GenerateDickinson
 
 def main():
+    """
+    Main function that runs the process. It creates a generate_dickinson
+    object and calls methods in generate_dickinson to create a new poem.
+    """
     print(
         "Inspired by Emily Dickinson, I can generate poetry in her style.\n"
         "I will:\n"
@@ -20,17 +24,18 @@ def main():
     poems = generator.load_dickinson_poems()
     generator.most_similar_poem(poems)
 
+    # Most similar Dickinson Poem
     best_score = generator.most_similar_poem_score
     best_text = generator.most_similar_poem_text
 
-    print("\n I think this is the most similar original Dickinson poem to your word:\n")
+    print("\n I think this is the most similar original Dickinson poem to your"
+            "word:\n")
     print(best_text)
     print("\nSimilarity score: {:.2f}%".format(best_score * 100))
 
     # Generate new poem
     raw_lines = generator.generate_dickinson()
-    cleaned = generator.clean_poem_add_synonyms(raw_lines)
-    final_poem = generator.enforce_aabb(cleaned)
+    final_poem = generator.clean_poem_add_synonyms(raw_lines)
 
     final_poem_text = "\n".join(final_poem)
 
@@ -43,7 +48,8 @@ def main():
     print("\nMy poem similarity score: {:.2f}%".format(final_score * 100))
 
     if final_score > best_score:
-        print("My poem is more similar to your word than any of the Dickinson poems I have stored!")
+        print("My poem is more similar to your word than any of the Dickinson"
+                "poems I have stored!")
     else:
         print("I didn't beat Dickinson, but I made something new in her style.")
 
@@ -63,7 +69,6 @@ def main():
         print(f"Saved to {fname}")
     else:
         print("Okay, not saved. You can always try me again!")
-
 
 if __name__ == "__main__":
     main()
