@@ -1,12 +1,12 @@
-## System Name
+# System Name
 Dickinson-Meets-Seuss
 
-# Description 
+## Description 
 
-# How to Set Up and Run
+## How to Set Up and Run
 
-# Challenges
+## Challenges
 
-# Sources
+## Sources
 
-# Interaction Metric Results
+## Interaction Metric Results
