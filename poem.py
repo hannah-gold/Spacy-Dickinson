@@ -1,5 +1,8 @@
 class Poem: 
-    """ Represents an entire Dickinson poem and computes its similarity to the user's inspiration word. """ 
+    """
+    Represents an entire Dickinson poem and computes its similarity to the
+    user's inspiration word.
+    """ 
     def __init__(self, poem_number, text, description_word_doc, nlp): 
         self.poem_number = poem_number # e.g. "I", "II", etc.
         self.text = text # full poem text
