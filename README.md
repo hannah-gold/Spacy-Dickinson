@@ -1,4 +1,4 @@
-Github Link: 
+Github Link: https://github.com/hannah-gold/Spacy-Dickinson.git 
 
 # System Name: Spacy Dickinson
 I chose this title becasue Dickinson is usually known for her introspective,
@@ -72,6 +72,31 @@ responded to using the generator because I didn't realize how far I came until
 showing it to someone else.
 
 ## Sources
+1. Maind, Ankush, Anil Deorankar, and Prashant Chatur. "Measurement of semantic
+ similarity between words: A survey." International Journal of Computer Science,
+ Engineering and Information Technology 2.6 (2012): 51-60.
+    - This survey paper helped guide my approach to choosing how/which Dickinson
+    lines to include in the generated poem. It reviews different models for
+    measuring semantic similarity between words and phrases—from path-based
+    metrics in lexical databases to vector-space approaches (which lead me to 
+    research more and rely on spaCy).
+2. Barzilay, Regina, and Noemie Elhadad. "Sentence alignment for monolingual
+comparable corpora." Proceedings of the 2003 conference on Empirical methods in
+natural language processing. 2003.
+    - This paper influenced the line-merging component of my system. The paper
+    shows how structurally similar sentences can be aligned and partially
+    substituted. Their techniques inspired my use of POS tags (nouns, verbs,
+    adjectives) to identify structurally meaningful word categories, and then
+    swap corresponding words between two Dickinson lines.
+3. Joanna Misztal and Bipin Indurkhya. "Poetry Generation System with an 
+emotional personality.
+    - I really liked this article because it gave me the idea to use a single 
+    word that the user chooses (the user has some emotional tie to that
+    word or else they would not have chosen it) to generate a poem. It also
+    utilized WordNet which was helpful to learn more about. Lastly, it also
+    gave me the idea for my interaction metric (computational empathy - 
+    recognition and interpretation of emotions of another person by the computer
+    system).
 
 ## Interaction Metric Results
 My metric was seeing user's reaction after running the system and if they saved
