@@ -28,7 +28,7 @@ def main():
     best_score = generator.most_similar_poem_score
     best_text = generator.most_similar_poem_text
 
-    print("\n I think this is the most similar original Dickinson poem to your"
+    print("\nI think this is the most similar original Dickinson poem to your"
             "word:\n")
     print(best_text)
     print("\nSimilarity score: {:.2f}%".format(best_score * 100))
@@ -39,9 +39,8 @@ def main():
 
     final_poem_text = "\n".join(final_poem)
 
-    print("\n Her is my Dickinson-Inspired poem:\n")
+    print("\nHere is my Dickinson-Inspired poem:\n")
     print(final_poem_text)
-    print("\n" + "-" * 40)
 
     # Evaluate new poem
     final_score = nlp(final_poem_text).similarity(nlp(word))
